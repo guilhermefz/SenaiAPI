@@ -11,13 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SenaiApi")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+516ecd26cc08f3aa8360a333ab786b3579b7246f")]
-[assembly: System.Reflection.AssemblyProductAttribute("SenaiApi")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SenaiApi")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("Swashbuckle.AspNetCore.SwaggerGen")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

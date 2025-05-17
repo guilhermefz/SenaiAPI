@@ -1,5 +1,41 @@
 [
   {
+    "ContainingType": "SenaiApi.Controllers.EscolaController",
+    "Method": "Index",
+    "RelativePath": "Escola",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SenaiApi.Controllers.EscolaController",
+    "Method": "Adicionar",
+    "RelativePath": "Escola/Adicionar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "escola",
+        "Type": "SenaiApi.Dtos.EscolaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SenaiApi.Controllers.EscolaController",
+    "Method": "BuscarTodos",
+    "RelativePath": "Escola/BuscarTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SenaiApi.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
