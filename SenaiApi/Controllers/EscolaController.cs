@@ -21,18 +21,36 @@ namespace SenaiApi.Controllers
             return Ok();
         }
 
-        [HttpPost("Adicionar")]
+        [HttpPost]
+        [Route("Adicionar")]
         public IActionResult Adicionar(EscolaDto escola)
         {
             _escolaService.Salvar(escola);
             return Ok();
         }
 
-        [HttpGet("BuscarTodos")]
+        [HttpGet]
+        [Route("BuscarTodos")]
         public IActionResult BuscarTodos()
         {
             var escola = _escolaService.BuscarTodos();
             return Ok(escola);
         }
+        [HttpDelete]
+        [Route("Remover")]
+        public async Task<IActionResult> Remover(long id)
+        {
+            await _escolaService.Remover(id);
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("Editar")]
+        public IActionResult Editar([FromBody] ExibirEscolaDto escola)
+        {
+            _escolaService.Editar(escola);
+            return Ok();    
+        }
+        
     }
 }

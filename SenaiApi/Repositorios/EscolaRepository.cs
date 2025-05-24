@@ -30,6 +30,15 @@ namespace SenaiApi.Repositorios
         {
             return _context.Escola.ToList();
         }
+        public async Task Remover(long id)
+        {
+            await _context.Escola.Where(c => c.Id == id).ExecuteDeleteAsync();
+        }
 
+        public Escola ObterPorId(long id)
+        {
+            return _context.Escola.FirstOrDefault(e => e.Id == id);
+        }
+       
     }
 }

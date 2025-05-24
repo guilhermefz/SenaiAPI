@@ -21,6 +21,8 @@ namespace SenaiApi
             builder.Services.AddDbContext<SenaiContext>();
             builder.Services.AddScoped<IEscolaService, EscolaService>();
             builder.Services.AddScoped<IEscolaRepository, EscolaRepository>();
+            builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            builder.Services.AddScoped<IEnderecoServices, EnderecoServices>();
 
             MapperConfiguration mapperConfiguration = new(mapperConfig => { mapperConfig.AddMaps(new[] { "SenaiApi" }); });
             builder.Services.AddSingleton(mapperConfiguration.CreateMapper());
