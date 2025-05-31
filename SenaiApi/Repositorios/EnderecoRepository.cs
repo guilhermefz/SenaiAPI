@@ -6,11 +6,11 @@ using SenaiApi.Servicos.Interfaces;
 
 namespace SenaiApi.Repositorios
 {
-    public class EnderecoRepository : IEnderecoRepository
+    public class EnderecoRepository : BaseRepository<Endereco> , IEnderecoRepository
     {
         private readonly SenaiContext _context;
 
-        public EnderecoRepository(SenaiContext context)
+        public EnderecoRepository(SenaiContext context) : base(context) 
         {
             _context = context;
         }
@@ -27,7 +27,8 @@ namespace SenaiApi.Repositorios
 
         public List<Endereco> PegarEnderecos()
         {
-            return _context.Endereco.ToList();
+            return base.ObterTodos().ToList();
+            //return _context.Endereco.ToList();
         }
 
         public void Remover(long enderecoId)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HrRciD3x50o=",
+  "dgSpecHash": "ngh53/AQLbw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\guilherme_f_campos\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
+  "projectFilePath": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guilherme_f_campos\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\guilherme_f_campos\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -2678,11 +2678,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guilherme_f_campos\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
+      "projectUniqueName": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
       "projectName": "SenaiApi",
-      "projectPath": "C:\\Users\\guilherme_f_campos\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
+      "projectPath": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
       "packagesPath": "C:\\Users\\guilherme_f_campos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guilherme_f_campos\\Source\\Repos\\SenaiAPI\\SenaiApi\\obj\\",
+      "outputPath": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

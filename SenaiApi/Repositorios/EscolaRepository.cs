@@ -7,12 +7,12 @@ using SenaiApi.Servicos.Interfaces;
 
 namespace SenaiApi.Repositorios
 {
-    public class EscolaRepository : IEscolaRepository
+    public class EscolaRepository : BaseRepository<Escola> , IEscolaRepository 
     {
         private readonly SenaiContext _context;
         private readonly object _escolarepository;
 
-        public EscolaRepository(SenaiContext context)
+        public EscolaRepository(SenaiContext context) : base(context)
         {
             _context = context;
         }
@@ -28,7 +28,8 @@ namespace SenaiApi.Repositorios
 
         public List<Escola> PegarTodos()
         {
-            return _context.Escola.ToList();
+            return base.ObterTodos().Include(c => c.Endereco).Include(c => c.professores).ToList();
+            //return _context.Escola.ToList(); //forma para retornar sem usar do BaseRepository
         }
         public async Task Remover(long id)
         {
@@ -37,7 +38,7 @@ namespace SenaiApi.Repositorios
 
         public Escola ObterPorId(long id)
         {
-            return _context.Escola.FirstOrDefault(e => e.Id == id);
+            return _context.Escola.Include(c => c.Endereco).Include(c => c.professores).FirstOrDefault(e => e.Id == id);
         }
        
     }

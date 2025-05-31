@@ -5,7 +5,19 @@
     "version": "1.0"
   },
   "paths": {
-    "/Salvar": {
+    "/Endereco": {
+      "get": {
+        "tags": [
+          "Endereco"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Endereco/Salvar": {
       "post": {
         "tags": [
           "Endereco"
@@ -36,7 +48,7 @@
         }
       }
     },
-    "/Listar": {
+    "/Endereco/Listar": {
       "get": {
         "tags": [
           "Endereco"
@@ -48,7 +60,7 @@
         }
       }
     },
-    "/Deletar": {
+    "/Endereco/Deletar": {
       "delete": {
         "tags": [
           "Endereco"
@@ -70,7 +82,7 @@
         }
       }
     },
-    "/Editar": {
+    "/Endereco/Editar": {
       "post": {
         "tags": [
           "Endereco"
@@ -198,6 +210,102 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/ExibirEscolaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Professor/Salvar": {
+      "post": {
+        "tags": [
+          "Professor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalvarProfessorDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalvarProfessorDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalvarProfessorDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Professor/Buscar": {
+      "get": {
+        "tags": [
+          "Professor"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Professor/Deletar": {
+      "delete": {
+        "tags": [
+          "Professor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Professor/Editar": {
+      "post": {
+        "tags": [
+          "Professor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfessorDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfessorDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             }
           }
@@ -340,6 +448,56 @@
             "nullable": true
           },
           "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endereco": {
+            "$ref": "#/components/schemas/EnderecoDto"
+          },
+          "professores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProfessorDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProfessorDto": {
+        "required": [
+          "nome"
+        ],
+        "type": "object",
+        "properties": {
+          "nome": {
+            "maxLength": 60,
+            "minLength": 1,
+            "type": "string"
+          },
+          "escolaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalvarProfessorDto": {
+        "required": [
+          "nome"
+        ],
+        "type": "object",
+        "properties": {
+          "nome": {
+            "maxLength": 60,
+            "minLength": 1,
+            "type": "string"
+          },
+          "escolaId": {
             "type": "integer",
             "format": "int64"
           }

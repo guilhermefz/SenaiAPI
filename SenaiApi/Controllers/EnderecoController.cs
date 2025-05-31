@@ -4,8 +4,11 @@ using SenaiApi.Servicos.Interfaces;
 
 namespace SenaiApi.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class EnderecoController : Controller
     {
+
         private readonly IEnderecoServices _enderecoServices;
         public EnderecoController(IEnderecoServices enderecoServices)
         {
@@ -42,8 +45,8 @@ namespace SenaiApi.Controllers
             return Ok();
         }
 
-        [HttpPost]
-        [Route("Editar")]
+        [HttpPost("Editar")]
+        
         public IActionResult EditarEndereco([FromBody] EnderecoDto enderecoDto)
         {
             _enderecoServices.Editar(enderecoDto);
