@@ -17,12 +17,7 @@ namespace SenaiApi.Repositorios
 
         public void SalvarEndereco(Endereco endereco)
         {
-            if (endereco.Id == 0)
-                _context.Endereco.Add(endereco);
-            else
-                _context.Endereco.Update(endereco);
-
-            _context.SaveChanges();
+            base.Salvar(endereco);
         }
 
         public List<Endereco> PegarEnderecos()

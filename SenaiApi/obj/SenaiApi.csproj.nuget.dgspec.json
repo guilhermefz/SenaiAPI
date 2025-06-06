@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj": {}
+    "C:\\Users\\GuilhermeF\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj": {
+    "C:\\Users\\GuilhermeF\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
+        "projectUniqueName": "C:\\Users\\GuilhermeF\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
         "projectName": "SenaiApi",
-        "projectPath": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
-        "packagesPath": "C:\\Users\\guilherme_f_campos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guilherme_f_campos\\source\\repos\\SenaiAPI\\SenaiApi\\obj\\",
+        "projectPath": "C:\\Users\\GuilhermeF\\Source\\Repos\\SenaiAPI\\SenaiApi\\SenaiApi.csproj",
+        "packagesPath": "C:\\Users\\GuilhermeF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\GuilhermeF\\Source\\Repos\\SenaiAPI\\SenaiApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\guilherme_f_campos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GuilhermeF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -63,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.15, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.7.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -14,12 +14,7 @@ namespace SenaiApi.Repositorios
         }
         public void Salvar(Classe classe)
         {
-            if (classe.Id == 0)
-                _context.Classe.Add(classe);
-            else
-                _context.Classe.Update(classe);
-
-            _context.SaveChanges();
+            base.Salvar(classe);
         }
 
         public List<Classe> ObterTodos()

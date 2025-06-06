@@ -20,6 +20,14 @@ namespace SenaiApi.Repositorios
             return _dbSet;
         }
 
+        public void Salvar(T entidade)
+        {
+            if(entidade.Id == 0)
+                _dbSet.Add(entidade);
+            else 
+                _dbSet.Update(entidade);
 
+            _context.SaveChanges();
+        }
     }
 }

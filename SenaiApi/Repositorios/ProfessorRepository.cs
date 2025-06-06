@@ -15,12 +15,7 @@ namespace SenaiApi.Repositorios
 
         public void SalvarProfessor(Professor professor)
         {
-            if (professor.Id == 0)
-                _context.Professor.Add(professor);
-            else
-                _context.Professor.Update(professor);
-
-            _context.SaveChanges();
+            base.Salvar(professor);
         }
         public List<Professor> PegarTodos()
         {

@@ -3,5 +3,6 @@
     public interface IBaseRepository<T> where T : class
     {
         IQueryable<T> ObterTodos();
+        void Salvar(T entidade);
     }
 }
