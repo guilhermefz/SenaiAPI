@@ -33,11 +33,10 @@ namespace SenaiApi.Servicos
             _escolaRepository.Remover(id);
         }
 
-        public void Editar(ExibirEscolaDto model)
+
+        public Escola ObterPorId(long id)
         {
-            var escola = _escolaRepository.ObterPorId (model.Id);
-            _mapper.Map(model, escola);
-            _escolaRepository.Salvar (escola);
+            return _escolaRepository.ObterPorId(id);
         }
     }
 }

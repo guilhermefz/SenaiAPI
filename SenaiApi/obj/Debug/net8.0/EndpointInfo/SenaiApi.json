@@ -24,6 +24,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnderecoDtoSalvar"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EnderecoDtoSalvar"
@@ -89,6 +94,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnderecoDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EnderecoDto"
@@ -125,13 +135,18 @@
         }
       }
     },
-    "/Escola/Adicionar": {
+    "/Escola/Salvar": {
       "post": {
         "tags": [
           "Escola"
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EscolaDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EscolaDto"
@@ -190,30 +205,21 @@
         }
       }
     },
-    "/Escola/Editar": {
-      "post": {
+    "/Escola/PegarPorId": {
+      "get": {
         "tags": [
           "Escola"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ExibirEscolaDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ExibirEscolaDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ExibirEscolaDto"
-              }
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -228,6 +234,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalvarProfessorDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/SalvarProfessorDto"
@@ -293,6 +304,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfessorDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/ProfessorDto"
@@ -433,32 +449,12 @@
       "EscolaDto": {
         "type": "object",
         "properties": {
-          "nome": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExibirEscolaDto": {
-        "type": "object",
-        "properties": {
-          "nome": {
-            "type": "string",
-            "nullable": true
-          },
           "id": {
             "type": "integer",
             "format": "int64"
           },
-          "endereco": {
-            "$ref": "#/components/schemas/EnderecoDto"
-          },
-          "professores": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProfessorDto"
-            },
+          "nome": {
+            "type": "string",
             "nullable": true
           }
         },

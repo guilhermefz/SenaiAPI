@@ -9,6 +9,6 @@ namespace SenaiApi.Servicos.Interfaces
         List<ExibirEscolaDto> BuscarTodos();
 
         Task Remover(long id);
-        void Editar(ExibirEscolaDto model);
+        Escola ObterPorId(long id);
     }
 }

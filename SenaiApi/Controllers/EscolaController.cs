@@ -22,9 +22,11 @@ namespace SenaiApi.Controllers
         }
 
         [HttpPost]
-        [Route("Adicionar")]
-        public IActionResult Adicionar(EscolaDto escola)
+        [Route("Salvar")]
+        public IActionResult Salvar([FromBody] EscolaDto escola)
         {
+            if (escola == null)
+                return BadRequest("Escola não pode ser nula");
             _escolaService.Salvar(escola);
             return Ok();
         }
@@ -36,6 +38,7 @@ namespace SenaiApi.Controllers
             var escola = _escolaService.BuscarTodos();
             return Ok(escola);
         }
+
         [HttpDelete]
         [Route("Remover")]
         public async Task<IActionResult> Remover(long id)
@@ -44,12 +47,11 @@ namespace SenaiApi.Controllers
             return Ok();
         }
 
-        [HttpPost]
-        [Route("Editar")]
-        public IActionResult Editar([FromBody] ExibirEscolaDto escola)
+        [HttpGet("PegarPorId")]
+        public IActionResult PegarPorId(long id) 
         {
-            _escolaService.Editar(escola);
-            return Ok();    
+            var escolas = _escolaService.ObterPorId(id);
+            return Ok(escolas);
         }
         
     }
